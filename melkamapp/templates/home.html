@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="center">
+        <h1>Admin Panel</h1>
+
+        <form class="box" method="POST">
+            {% csrf_token %}
+            <h2>User Name:</h2>
+            <input name="username"/>
+            <h2>Password:</h2>
+            <input name="password" type="password"/>
+            <br/><br/>
+            <button type="submit" onclick="submit()">Login</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+<style>
+    .center{
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .box{
+        margin-top: 60px;        
+    }
+    
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 50px;
+    }
+
+    button{
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    body{
+        background-color: orange;
+    }
+
+</style>
+</html>

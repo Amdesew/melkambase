@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="center">
+        <h1>Car Spare Part</h1>
+
+        <form method="POST" class="box">
+            {% csrf_token %}
+            <h2>Image Link:</h2>
+            <input name="image_link" />
+            <h2>Image Title:</h2>
+            <input name="image_title"/>
+            <h2>Image Discription(Price):</h2>
+            <input name="image_price"/>
+            <br/><br/>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+<style>
+    .center{
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .box{
+        margin-top: 60px;        
+    }
+    
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 50px;
+    }
+
+    button{
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    body{
+        background-color: orange;
+    }
+
+</style>
+
+</html>
