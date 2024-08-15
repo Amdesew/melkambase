@@ -11,17 +11,25 @@
         <h1>Admin Panel</h1>
         <a href="/natural_form">Natural Form</a> / <a href="/spare_form">Car Spare Part Form</a>
 
-        <div class="box">
-            <table>
-                <tr>
-                    <th>name</th>
-                    <th>order products</th>
-                    <th>amount</th>
-                    <th>phone number</th>
-                </tr>
-            </table>
-        </div>
+    </div>
 
+    <div class="box">
+        <table>
+            <tr>
+                <th>name</th>
+                <th>order products</th>
+                <th>amount</th>
+                <th>phone number</th>
+            </tr>
+            {% for i in order %}
+            <tr>
+                <td>{{i.user_name}}</td>
+                <td>{{i.orderd_item}}</td>
+                <td>{{i.amount_item}}</td>
+                <td>{{i.user_number}}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 
 
@@ -35,8 +43,18 @@
         font-family: arial;
     }
 
-    table{
-        flex: 10px;
+    .box{
+        padding: auto;
+        border-color: black;
+        border-radius: 20px;
+        background-color: white;
+        font-family: arial;
+        text-align: center;
+    }
+
+    th{
+        text-align: center;
+
     }
 
     a{

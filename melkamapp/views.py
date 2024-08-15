@@ -28,7 +28,8 @@ def logein(request):
     return render(request, 'home.html', {"form": form})
 
 def home(request):
-    return render(request, 'order.html')
+    order = orders.objects.all()
+    return render(request, 'order.html', {"order": order})
 
 ImageForm = ['image_link', 'image_title', 'image_price']
 

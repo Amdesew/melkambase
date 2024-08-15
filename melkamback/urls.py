@@ -30,7 +30,7 @@ router.register(r'carspare', CarSpareViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', logein),
+    path('', home),
     path('home/', home),
     path('natural_form/', natural_form),
     path('spare_form/', spare_form),
